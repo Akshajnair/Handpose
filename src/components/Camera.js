@@ -48,7 +48,7 @@ export class Camera extends Component {
 
       // Make Detections
       const hand = await net.estimateHands(video);
-      
+
       //   console.log(hand);
 
       // Draw mesh
@@ -61,44 +61,42 @@ export class Camera extends Component {
     else
       return (
         <div>
-          <section class="u-clearfix u-grey-80 u-section-3" id="sec-dc91">
-            <div
-              class="u-clearfix u-image u-image-contain u-sheet u-image-1"
-              data-image-width="1080"
-              data-image-height="1080"
-            >
-              <Webcam
-                class="embed-responsive-item"
-                ref={this.webcamRef}
-                style={{
-                  position: "absolute",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  left: 0,
-                  right: 0,
-                  textAlign: "center",
-                  zindex: 9,
-                  top: 0,
-                  width: "auto",
-                  height: "100%",
-                }}
-              />
-              <canvas
-                ref={this.canvasRef}
-                style={{
-                  position: "absolute",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  left: 0,
-                  right: 0,
-                  textAlign: "center",
-                  zindex: 9,
-                  top: 0,
-                  width: "auto",
-                  height: "100%",
-                }}
-              />
-            </div>
+          <section
+            class="u-clearfix u-grey-80 u-section-3"
+            id="sec-dc91"
+            style={{ height: "100vh" }}
+          >
+            <Webcam
+              class="embed-responsive-item"
+              ref={this.webcamRef}
+              style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                zindex: 9,
+                top: 0,
+                width: "auto",
+                height: "100%",
+              }}
+            />
+            <canvas
+              ref={this.canvasRef}
+              style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                zindex: 9,
+                top: 0,
+                width: "auto",
+                height: "100%",
+              }}
+            />
           </section>
         </div>
       );
