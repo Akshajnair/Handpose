@@ -34,7 +34,7 @@ export class Home extends Component {
                         This is a Tensor flow based hand recognition
                         application.
                         <br />
-                        Author:{" "}
+                        Author: 
                         <span style={{ fontWeight: 700, fontSize: "1.125rem" }}>
                           Akshaj Nair
                         </span>
@@ -43,7 +43,6 @@ export class Home extends Component {
                         <a
                           className="u-social-url"
                           title="GitHub | Akshaj Nair"
-                          target="_blank"
                           href="https://github.com/Akshajnair"
                         >
                           <span className="u-icon u-icon-circle u-social-facebook u-social-icon u-text-white u-icon-1">

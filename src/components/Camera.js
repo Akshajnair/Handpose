@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "react";
+import React, { Component } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
@@ -10,6 +10,7 @@ export class Camera extends Component {
     super(props);
     this.state = {
       loader: true,
+      error: "please wait while System is loading",
     };
     this.webcamRef = React.createRef();
     this.canvasRef = React.createRef();
@@ -24,7 +25,7 @@ export class Camera extends Component {
     //  Loop and detect hands
     setInterval(() => {
       this.detect(net);
-    }, 100);
+    }, 10);
   }
   async detect(net) {
     // Check data is available
@@ -47,8 +48,10 @@ export class Camera extends Component {
       this.canvasRef.current.height = videoHeight;
 
       // Make Detections
-      const hand = await net.estimateHands(video);
+      const hand = await net.estimateHands(video, true);
 
+      if (hand.length === 0) this.setState({ error: "NO Hand Detected" });
+      else this.setState({ error: "" });
       //   console.log(hand);
 
       // Draw mesh
@@ -69,6 +72,9 @@ export class Camera extends Component {
             <Webcam
               class="embed-responsive-item"
               ref={this.webcamRef}
+              audio={false}
+              mirrored={true}
+              videoConstraints={{ facingMode: "user" }}
               style={{
                 position: "absolute",
                 marginLeft: "auto",
@@ -97,6 +103,22 @@ export class Camera extends Component {
                 height: "100%",
               }}
             />
+            <div
+              style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                zindex: 9,
+                top: 0,
+                width: "auto",
+                height: "100%",
+              }}
+            >
+              {this.state.error}
+            </div>
           </section>
         </div>
       );

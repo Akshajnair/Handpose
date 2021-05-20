@@ -1,35 +1,36 @@
 // Points for fingers
 const fingerJoints = {
   thumb: [0, 1, 2, 3, 4],
-  indexFinger: [0, 5, 6, 7, 8],
-  middleFinger: [0, 9, 10, 11, 12],
-  ringFinger: [0, 13, 14, 15, 16],
-  pinky: [0, 17, 18, 19, 20],
+  indexFinger: [5, 6, 7, 8],
+  middleFinger: [9, 10, 11, 12],
+  ringFinger: [13, 14, 15, 16],
+  pinky: [17, 18, 19, 20],
+  palm: [0, 17, 13, 9, 5, 2],
 };
 
-const style = {
-  0: { color: "grey", size: 3 },
-  1: { color: "grey", size: 3 },
-  2: { color: "grey", size: 3 },
-  3: { color: "grey", size: 3 },
-  4: { color: "grey", size: 3 },
-  5: { color: "grey", size: 3 },
-  3: { color: "grey", size: 3 },
-  7: { color: "grey", size: 3 },
-  8: { color: "grey", size: 3 },
-  9: { color: "grey", size: 3 },
-  10: { color: "grey", size: 3 },
-  11: { color: "grey", size: 3 },
-  12: { color: "grey", size: 3 },
-  13: { color: "grey", size: 3 },
-  14: { color: "grey", size: 3 },
-  15: { color: "grey", size: 3 },
-  13: { color: "grey", size: 3 },
-  17: { color: "grey", size: 3 },
-  18: { color: "grey", size: 3 },
-  19: { color: "grey", size: 3 },
-  20: { color: "grey", size: 3 },
-};
+// const style = {
+//   0: { color: "grey", size: 3 },
+//   1: { color: "grey", size: 3 },
+//   2: { color: "grey", size: 3 },
+//   3: { color: "grey", size: 3 },
+//   4: { color: "grey", size: 3 },
+//   5: { color: "grey", size: 3 },
+//   3: { color: "grey", size: 3 },
+//   7: { color: "grey", size: 3 },
+//   8: { color: "grey", size: 3 },
+//   9: { color: "grey", size: 3 },
+//   10: { color: "grey", size: 3 },
+//   11: { color: "grey", size: 3 },
+//   12: { color: "grey", size: 3 },
+//   13: { color: "grey", size: 3 },
+//   14: { color: "grey", size: 3 },
+//   15: { color: "grey", size: 3 },
+//   13: { color: "grey", size: 3 },
+//   17: { color: "grey", size: 3 },
+//   18: { color: "grey", size: 3 },
+//   19: { color: "grey", size: 3 },
+//   20: { color: "grey", size: 3 },
+// };
 
 // Drawing function
 export const drawHand = (predictions, ctx) => {
