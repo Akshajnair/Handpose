@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // eslint-disable-next-line
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
@@ -11,6 +11,7 @@ export class Camera extends Component {
     this.state = {
       loader: true,
       error: "please wait while System is loading",
+      gesture: null,
     };
     this.webcamRef = React.createRef();
     this.canvasRef = React.createRef();
@@ -25,7 +26,7 @@ export class Camera extends Component {
     //  Loop and detect hands
     setInterval(() => {
       this.detect(net);
-    }, 10);
+    }, 100);
   }
   async detect(net) {
     // Check data is available
@@ -51,8 +52,9 @@ export class Camera extends Component {
       const hand = await net.estimateHands(video, true);
 
       if (hand.length === 0) this.setState({ error: "NO Hand Detected" });
-      else this.setState({ error: "" });
-      //   console.log(hand);
+      else {
+        this.setState({ error: "" });
+      }
 
       // Draw mesh
       const ctx = this.canvasRef.current.getContext("2d");
