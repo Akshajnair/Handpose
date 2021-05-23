@@ -1,5 +1,6 @@
 import React, { Component } from "react"; // eslint-disable-next-line
 import * as tf from "@tensorflow/tfjs";
+import "@tensorflow/tfjs-backend-webgl";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 import Loader from "./Loader";
