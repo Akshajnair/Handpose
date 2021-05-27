@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+# Rock Paper Scissor Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Use Tensorflow Hand recognition model to make moves and play.
+
+## Getting Started
+
+Live version is available at https://hand-pose.herokuapp.com feel free to test it out and report any issues.
+
+## ScreenShots
+
+### Home Page
+
+![Home Page](https://raw.githubusercontent.com/Akshajnair/Handpose/main/screenshots/home.png)
+
+### Gameplay
+
+https://user-images.githubusercontent.com/34983749/119874235-060a8980-bf43-11eb-9a4f-5283315a207a.mp4
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `cd client`
 
 ### `npm start`
 
@@ -38,3 +54,15 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+## Authors
+
+- **Akshaj Nair** - [akshajnair](https://github.com/Akshajnair)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
