@@ -14,7 +14,7 @@ Live version is available at https://hand-pose.herokuapp.com feel free to test i
 
 ### Gameplay
 
-https://user-images.githubusercontent.com/34983749/119874235-060a8980-bf43-11eb-9a4f-5283315a207a.mp4
+https://user-images.githubusercontent.com/34983749/119881692-335b3580-bf4b-11eb-8a54-19bffb7ddecb.mp4
 
 ## Available Scripts
 
