@@ -39,5 +39,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Use Tensorflow Hand recognition model to make moves and play.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshajnair/Handpose.git"
+  },
+  "author": "akshaj nair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akshajnair/Handpose/issues"
+  },
+  "homepage": "https://github.com/Akshajnair/Handpose#readme"
 }
